@@ -1,0 +1,37 @@
+
+
+<br><br><br><br>
+
+<%= form_for(resource, as: resource_name, :class => "form-horizontal", url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <fieldset>
+    <legend>Create Search</legend>
+    <div class="form-group">
+      
+      <div class="col-lg-10">
+        <%= f.email_field :email, :class => "form-control",:placeholder => "Search Name. Format: search_name@your_name", autofocus: true %>
+      </div>
+    
+      <div class="col-lg-10">
+       <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    <%= f.password_field :password, :class => "form-control", :placeholder => "Password", autocomplete: "off" %> 
+    </div>
+
+      <div class="col-lg-10 ">
+    <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "Confirm Password" %><br />
+      </div>
+    </div>
+    <br><br>
+    <div align="center" class="form-group">
+      <div class="col-lg-10 ">
+      <br>
+        <%= f.submit "Create" , :class => "btn btn-primary" %>
+      </div>
+    </div>
+  </fieldset>
+
+<%= render "devise/shared/links" %>
+<% end -%>

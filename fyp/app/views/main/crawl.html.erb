@@ -1,0 +1,58 @@
+<h1>Crawled Links:</h1>
+
+
+<br><br><br>
+
+
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Urls</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+
+	<% @links.each do |link| %>
+	    <tr>
+	      <td><%= link.link %></td>
+	      <td><%= link_to  'Delete' , main_delete_path(:id => link.id) %></td>
+	    </tr>
+	<% end %>
+
+  </tbody>
+</table> 
+
+
+  </div>
+</div>
+
+
+
+<%= form_tag main_crawl_path, :class => '', :method => 'get' do %>
+
+        <%= text_field_tag :add, nil, placeholder: 'Add Url', :class => 'form-control' %>
+
+        <%= submit_tag "Add", :class =>"col-xs-12 col-sm-6 col-sm-offset-3 btn btn-default"%>
+   
+
+<% end %>
+
+
+
+<br><br><br>
+
+
+
+<%= link_to  "Lock In Links", backend_front_path, :class => "col-xs-12 col-sm-6 col-sm-offset-3 btn btn-primary" %>
+
+
+<%= form_tag main_crawl_path, :class => '', :method => 'get' do %>
+
+        <%= text_field_tag :name, nil, placeholder: 'Add Product Names', :class => 'form-control' %>
+
+        <%= submit_tag "Add Product Name", :class =>"col-xs-12 col-sm-6 col-sm-offset-3 btn btn-default"%>
+   
+
+<% end %>

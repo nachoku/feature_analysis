@@ -1,0 +1,97 @@
+
+
+
+
+<% if params[:query] %>
+<h1>Results:</h1>
+<% urls=Array.new %>
+<p style="color:blue">
+<% lin= @links.length %> 
+
+</p>
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Flipkart</h3>
+  </div>
+  <div class="panel-body">
+
+<%= form_tag main_intermediate_path, :method => 'get' do %>
+	
+
+	<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Urls</th>
+      <th>Selection</th>
+    </tr>
+  </thead>
+  <tbody>
+
+	<% while  lin>0 do %>
+	    <tr>
+	      <td><%= link_to  @links[lin-1].text, ("http://www.flipkart.com" << @links[lin-1]["href"].to_s) %></td>
+	      <td><%= check_box_tag 'urls[]', ("http://www.flipkart.com" << @links[lin-1]["href"].to_s) %></td>
+	    </tr>
+	    <%   lin=lin-1 %>
+	<% end %>
+
+  </tbody>
+</table> 
+
+
+  </div>
+</div>
+
+<br><br><br>
+
+
+
+
+<% lin= @links1.length %> 
+
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">Amazon</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Urls</th>
+      <th>Selection</th>
+    </tr>
+  </thead>
+  <tbody>
+
+	<% while  lin>0 do %>
+	<tr>
+		<td><%= link_to  @links1[lin-1].text, (@links1[lin-1]["href"].to_s)%></td>
+	  <td><%= check_box_tag 'urls[]', (@links1[lin-1]["href"].to_s) -%></td>
+	</tr>
+	<%   lin=lin-1 %>
+	<% end %>
+
+  </tbody>
+</table> 
+
+  </div>
+</div>
+
+
+<%= submit_tag "Select", :class => "col-xs-12 col-sm-6 col-sm-offset-3 btn btn-primary btn-lg" %>
+<% end %>
+
+<% else %>
+<br><br>
+<h1>Enter your search query. The reivews are chosen from the selected products.</h1>
+
+<% end %>
+
+
+

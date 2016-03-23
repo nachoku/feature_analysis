@@ -1,0 +1,36 @@
+
+
+<div id='chart' class="col-xs-6">
+<%= render_chart(@chart, 'chart') %>
+<% if params[:param1] %>
+<%= render_chart(@fea, 'chart') %>
+<% end -%>
+
+</div>
+<div id='chart' class="col-xs-6">
+<br><br>
+<div class="list-group">
+<% @feature_file.each_line do |line| %>
+	<% line.split(",").each do |x|%>
+	<%@name=@percentage %>
+	<%@percentage=x %>
+ 
+  <% end -%>
+
+    
+    <%= link_to @name,  result_front_path(:param1 => @name, :param2=> @percentage),:class => "list-group-item list-group-item-heading" %>
+  
+  
+<% end -%>
+
+
+</div>
+
+
+</div>
+
+<%=@overall%>
+
+
+
+

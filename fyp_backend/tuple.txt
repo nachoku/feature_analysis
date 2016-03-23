@@ -1,0 +1,100 @@
+;;;;NaN
+;product items ;working fine charging multiple stopped working disappointed ;0.5769231 0.54844004 0.42568544 0.58431375 0.39297387 0.5769231 0.20173913 ;0.47242832
+;Nada ;;;NaN
+;;supposed ;0.31387666 ;0.31387666
+;phone battery charges ;;;NaN
+;quality ;build good ;0.60421544 0.6401831 ;0.6221993
+;time item ;wrong ;0.40665993 ;0.40665993
+;time rooms solo charger features rooms solo charger site ;ordered following Key displayed ;0.5190698 0.5821697 null 0.5787037 ;0.55998105
+;flash light ;LED ;null ;NaN
+;battery level indicator ;LED ;null ;NaN
+;PC abs alloy plastic structure ;;;NaN
+;capacity ;;;NaN
+;contrary rooms solo flash light rest features ;received does |N|LED ;0.47205815 0.52238804 null ;0.49722308
+;lease rooms solo features order refund money ;ensure displayed cancel ;0.6119403 0.5787037 0.23280424 ;0.47448277
+;site suppliers customer ;stop advertising |N|supply advertise cheat ;0.39297387 0.414966 0.3291139 0.414966 0.42708334 ;0.39582062
+;incident consumer court compensation kind harassment item site money time days ;thinking seek faced ordering blocking ;0.5341538 0.63235295 0.56790125 0.5190698 0.65591395 ;0.58187836
+;rs works users ;purchased good heavy ;0.53436226 0.6401831 0.6030856 ;0.5925436
+;capacity times charge batteries ;;;NaN
+;hours charge time ;worth ;0.7685846 ;0.7685846
+;people size size power banks ;|N|recommended requiring sleek little big sleek ;0.21947366 0.5531629 0.71929824 0.6753708 0.5555072 0.71929824 ;0.57368517
+;times charge backup usage ;charges good built rough daily ;0.42568544 0.6401831 0.69722223 0.443038 0.7401575 ;0.58925724
+;subject warranty mention warranty power bank ;want know pl let know ;0.55500823 0.5347476 null 0.5309626 0.5347476 ;0.5388665
+;bit phone thrice ;heavy charges ;0.6030856 0.42568544 ;0.5143855
+;;recommend cheap sturdy ;0.78052634 0.3322818 0.8631347 ;0.6586476
+;days mistake kart sellers ;spoiled |N|buy spoiled doesn't charged buying flip |N|entertain ;0.50574714 0.46142334 0.50574714 0.46972024 0.42568544 0.53857666 0.5677083 0.30952382 ;0.4730165
+;stats ;;;NaN
+;size image ;shown small ;0.5594059 0.6038136 ;0.5816097
+;size ;actual thought ;0.41273585 0.40215793 ;0.4074469
+;experience product working charge time charge times ;personal |N|good minimum mobile ;0.6555773 0.3598169 0.6666667 0.56435645 ;0.5616044
+;kart police ;flip returned worse ;0.5677083 0.17855169 0.171875 ;0.306045
+;replacement item s order ;we've arranged following ;0.66764706 0.6 0.5821697 ;0.6166056
+;item s replacement item s Saturday Dec ;pick original delivering ;0.59836066 0.5417004 0.625 ;0.5883537
+;DDT replacement ;|N||N|;0.39999998 ;0.39999998
+;week feed seller donut product product ;working buy ;0.5769231 0.53857666 ;0.55774987
+;rooms solo charger months money draw time ;past good worth long charging ;0.5276382 0.6401831 0.7685846 0.6037222 0.42568544 ;0.5931627
+;product months max canvas battery thrice ;nice satisfied charges micro blown ;0.7155603 0.83729434 0.42568544 0.65 0.7010309 ;0.6659142
+;hours days days response ;charge charging idle tried ;0.42568544 0.42568544 0.41666666 0.45221168 ;0.4300623
+;need expectation satisfaction family friends ;Happy solves ordered fine ;null 0.6103896 0.5190698 0.54844004 ;0.55929977
+;seller rooms product seller service rooms India India service seller customer care warranty sticker device ;original good buy ;0.5417004 0.6401831 0.53857666 ;0.57348675
+;pros product finish capacity ;good provides stated ;0.6401831 0.6230503 0.40509915 ;0.55611086
+;phone thrice ;charge ;0.42568544 ;0.42568544
+;output ports ;rated ;0.4945055 ;0.4945055
+;time ;large heavy long recharge ;0.65725416 0.6030856 0.6037222 0.5597484 ;0.6059526
+;capacity ;expected considering ;0.5117647 0.55627906 ;0.53402185
+;capacity output port ;failed does |N|deliver current ;0.25 0.52238804 0.375 0.613079 ;0.44011676
+;product port ;usable continues work ;0.525641 0.5443609 0.5769231 ;0.548975
+;OE month issues ;past ;0.5276382 ;0.5276382
+;power bank phones motto ass Zen phone laser ease ;able charge ;0.61534333 0.42568544 ;0.52051437
+;pros ;;;NaN
+;;lightweight ;0.7407407 ;0.7407407
+;phones ;charged ;0.42568544 ;0.42568544
+;indicator ;LED accurate ;null 0.7325843 ;0.7325843
+;;;;NaN
+;;long charge ;0.6037222 0.42568544 ;0.5147038
+;power bank days phone times ;charges ;0.42568544 ;0.42568544
+;power banks ;compared perform ;0.646086 0.6426799 ;0.64438295
+;pros ;;;NaN
+;design ;Good ;null ;NaN
+;battery indicator ;;;NaN
+;charge ;;;NaN
+;;;;NaN
+;bit ;;;NaN
+;month ;;;NaN
+;product travels mobile ;good long charging ;0.6401831 0.6037222 0.42568544 ;0.55653024
+;performance Romeo ss power Bank ;happy ;0.76445085 ;0.76445085
+;buying ;worth ;0.7685846 ;0.7685846
+;cable charger ;short difficult ;0.52626157 0.4653962 ;0.49582887
+;cable length laptop ;suitable ;0.6395349 ;0.6395349
+;Product flaws ;efficient ;0.7288136 ;0.7288136
+;product ;recommend ;0.78052634 ;0.78052634
+;packing delivery product ;impressed ;0.80124223 ;0.80124223
+;power bank pH times power bank size matter output devices hours charge product D ;awesome charge charging bulky doesn't port doesn't compatible good reached ;0.8484349 0.42568544 0.42568544 0.46875 0.46972024 0.36842105 0.46972024 0.5539906 0.6401831 0.5953608 ;0.5265952
+;product battery bank battery bank wool convent ;awesome looking long awesome included dong charge ;0.8484349 0.5656552 0.6037222 0.8484349 0.6708584 1.0 0.42568544 ;0.7089701
+;power bank power bit time output ;efficient good charging little charge good current ;0.7288136 0.6401831 0.42568544 0.6753708 0.42568544 0.6401831 0.613079 ;0.5927143
+;;works great ;0.5769231 0.7854365 ;0.68117976
+;disadvantage time charger ;long charge rapid ;0.6037222 0.42568544 0.53571427 ;0.5217073
+;charge mi range android phones juice ;charge left ;0.42568544 0.47081712 ;0.44825128
+;Product yesterday ;packed received working ;0.6875 0.47205815 0.5769231 ;0.5788271
+;outputs amp amp ;recommend looking ;0.78052634 0.5656552 ;0.67309076
+;weight bit outputs ;heavy anticipated ;0.6030856 0.45833334 ;0.53070945
+;months power storage capacity charge times mobile ;past feel good ;0.5276382 0.6195363 0.6401831 ;0.59578586
+;weight bit concern power banks product ;compare weightless good ;0.646086 1.0 0.6401831 ;0.7620897
+;product ;good ;0.6401831 ;0.6401831
+;months issues ;purchased ;0.53436226 ;0.53436226
+;product issues ;look wise nice charging loading ;0.5656552 0.61445785 0.7155603 0.42568544 0.5063291 ;0.5655376
+;;;;NaN
+;size power bank pic site ;big compared shown ;0.5555072 0.646086 0.5594059 ;0.5869997
+;;;;NaN
+;hrs time Pb time ;charge ;0.42568544 ;0.42568544
+;;heavy carry ;0.6030856 0.7303634 ;0.6667245
+;;;;NaN
+;MI Kimmi Pb ;working fine ;0.5769231 0.54844004 ;0.56268156
+;suggestion MI power banks ;;;NaN
+;torii days delivery man day ;Nice stand got local gave ;null 0.56304985 0.5048478 0.5751825 0.4142725 ;0.5143382
+;charger product ;|N|supplied ;0.3291139 ;0.3291139
+;power bank charger ;good charged ;0.6401831 0.42568544 ;0.53293425
+;God ;knows ;0.5347476 ;0.5347476
+;packaging ;|N|good expected disappointed ;0.3598169 0.5117647 0.20173913 ;0.35777357
+;bit power bank charger product ;heavy freaks ;0.6030856 0.46875 ;0.53591776
+;cable ;charging small ;0.42568544 0.6038136 ;0.5147495
