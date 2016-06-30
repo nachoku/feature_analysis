@@ -16,3 +16,5 @@ wont
 wouldn't
 wouldnt
 although
+doesn't
+neither

@@ -12,7 +12,7 @@ public class Fyp_backend
       public static void main(String[] args) throws SuggesterException, IOException
       {
           Result obj_result=new Result();
-          
+          int review_no=0;
           
           
           TrainNaiveBayes train=new TrainNaiveBayes();
@@ -21,10 +21,14 @@ public class Fyp_backend
           Formatter obj_format=new Formatter();
           //obj_format.master();
           
-             
-        File f=new File("tuple.txt");
-        f.createNewFile();
-        f.delete();
+          
+          
+          Test obj_test=new Test();
+          //obj_test.main_test();
+     ///*      
+          File f=new File("tuple.txt");
+          f.createNewFile();
+          f.delete();
           
           
        
@@ -46,15 +50,13 @@ public class Fyp_backend
           while(scan_review.hasNextLine())
           {
           
-            //System.out.println(scan_review.nextLine());
-              
-              
+              //System.out.println(scan_review.nextLine());     
               //String text= "I was veryi not happy with it. Trusting Lenovo, I ordered 5x and it was a good decision.  The UI lags sometimes, but no lags when using any app or playing games (Asphalt 8 runs super smooth).";
               String text=scan_review.nextLine();
             
               
-           //preprocessing
-            String sentence_word[][]=object.preprocess(text, extra);
+             //preprocessing
+             String sentence_word[][]=object.preprocess(text, extra);
 
 
 
@@ -62,17 +64,22 @@ public class Fyp_backend
             sentence_word=object.analysis(sentence_word);
 
             //classify
-            obj_tuple.classify(sentence_word);
-                    
-                    
+            obj_tuple.classify(review_no, sentence_word);
+            
+            review_no++;        
            
           }
            scan_review.close();
                   
      obj_result.overall();
      obj_result.feature();
+     
+     
+     
+     Sort obj_sort=new Sort();
+     obj_sort.main_sort();
       
-      
+      //*/
       }   
       
       public String[][] analysis (String [][] sentence_word) throws SuggesterException
@@ -81,7 +88,7 @@ public class Fyp_backend
           Splitter obj_split=new Splitter();
           Tuple obj_tuple=new Tuple();
           int i,j;
-          String sentence[]=new String [100];
+          String sentence[]=new String [3000];
         
           i=0;
           while(sentence_word[i][0]!=null)

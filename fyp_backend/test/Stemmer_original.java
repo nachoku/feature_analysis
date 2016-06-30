@@ -1,4 +1,4 @@
-package fyp_backend;
+
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,13 +7,13 @@ import java.util.*;
 import java.text.*;
 import java.lang.*;
 
-public class Fyp_backend 
+public class Stemmer_original 
 {
       public static void main(String[] args) 
       {
           String test= "Stemming is not funning. Soo much Phunning. I'm cooling bitches of the sendary nationalistic order. Pow, pow, pow";
-          Fyp_backend sent=new Fyp_backend();
-          sent.sentence(test);     
+          //Fyp_backend sent=new Fyp_backend();
+          //sent.sentence(test);     
           Stemmer obj=new Stemmer();
           obj.main(test);
                

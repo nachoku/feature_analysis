@@ -4,9 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/nach/Documents/NetBeansProjects/fyp_backend/src/fyp_backend/Fyp_backend.java</file>
+            <file>file:/C:/Users/nach/Documents/NetBeansProjects/fyp_backend/src/fyp_backend/Test.java</file>
             <file>file:/C:/Users/nach/Documents/NetBeansProjects/fyp_backend/src/fyp_backend/Tuple.java</file>
-            <file>file:/C:/Users/nach/Documents/NetBeansProjects/fyp_backend/src/fyp_backend/Elements.java</file>
+            <file>file:/C:/Users/nach/Documents/NetBeansProjects/fyp_backend/src/fyp_backend/NaiveBayes.java</file>
             <file>file:/C:/Users/nach/Documents/NetBeansProjects/fyp_backend/src/fyp_backend/Result.java</file>
+            <file>file:/C:/Users/nach/Documents/NetBeansProjects/fyp_backend/src/fyp_backend/TrainNaiveBayes.java</file>
         </group>
     </open-files>
 </project-private>

@@ -5,7 +5,8 @@ require 'open-uri'
 class MainController < ApplicationController
   def first
     Dir.chdir "C:\\Users\\nach\\Documents\\NetBeansProjects"
-      page=Nokogiri::HTML(open("http://www.amazon.in"))
+      
+
       create_config
     if params[:query]
 
@@ -99,10 +100,7 @@ class MainController < ApplicationController
           end
 
     end
-    @status=Status.find_by(user: current_user)
-    @status.crawl=1
-    @status.file_write=0
-    @status.save
+
     redirect_to backend_front_path
 
   end
@@ -133,6 +131,8 @@ class MainController < ApplicationController
       end
       i=i-1
      end
+   rescue
+    next_flipkart(a)
   end
 
 def next_amazon(a)
@@ -153,6 +153,8 @@ def next_amazon(a)
       end
       i=i-1
      end
+   rescue
+    next_amazon(a)
   end
 
 

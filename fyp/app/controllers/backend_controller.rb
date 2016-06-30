@@ -12,9 +12,6 @@ class BackendController < ApplicationController
 
   def store
 
-  @h=Status.find_by(user: current_user)
-  @h.file_write=1
-  @h.save
 
   	aFile = File.open( current_user.id.to_s + ".txt", "w")
 	 

@@ -166,7 +166,6 @@ public class TrainNaiveBayes {
                                  value=0;
                                  temp=obj_stem.main_stem(temp);
                                  if(hm_class1.get(temp)!=null)
-
                                  {
 
                                      hm_class1.put(temp, hm_class1.get(temp)+1);

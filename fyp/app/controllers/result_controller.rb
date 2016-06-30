@@ -27,9 +27,6 @@ class ResultController < ApplicationController
 	@feature_file=File.open("feature.txt","r")
 
 
-	
-
-
 	if (params[:param1])
 		param1 = params[:param1]
 		param2 = params[:param2]
@@ -55,14 +52,57 @@ class ResultController < ApplicationController
 
   end
 
-	def selected
-		Dir.chdir "C:\\Users\\nach\\Documents\\NetBeansProjects"
-	  	aFile = File.open( "overall.txt", "r")
-	 	aFile.each_line do |line|
-    	@overall=line.to_f
-   	end
+
+	def view
+
+
+		data_table = GoogleVisualr::DataTable.new
+		# Add Column Headers
+
+
+		data_table.new_column('string', 'Feature' )
+		data_table.new_column('number', 'Positive Sentiment')
+		
+
+		# Add Rows and Values
+		@size=0
+		File.open("feature_sort.txt","r").each_line do |line| 
+		 	line.split(",").each do |x|
+
+				@name=@percentage 
+				@percentage=x 
+				@size=@size+1
+			 end 
+			 data_table.add_rows([
+		    [@name, 100.to_f*@percentage.to_f]
+		])
+		end
+		
+		
+		option = { width: 1700, height: @size*18, title: 'Feature Perception' }
+		@chart = GoogleVisualr::Interactive::BarChart.new(data_table, option)
+
+
+	
+
+
 
 	end
 
+
+
+
+	def sort1
+		Dir.chdir "C:\\Users\\nach\\Documents\\NetBeansProjects"
+
+		@size=0
+		@sorted=File.open("feature_sort.txt","r")
+		@sorted.each_line do |x|
+			@size=@size+1
+		end
+		@part=@size/3
+
+
+	end
 
 end

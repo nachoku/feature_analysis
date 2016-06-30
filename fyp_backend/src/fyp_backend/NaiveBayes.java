@@ -44,11 +44,11 @@ public class NaiveBayes {
         //System.out.println(key + value);
         if(input.equals(key))//check if input in hashmap
         {
-            System.out.println("><<><><>"+value);
+            //System.out.println("><<><><>"+value);
             return value;
         }
       }  
-        System.out.println("><<><><>NOT FOUND");
+        //System.out.println("><<><><>NOT FOUND");
         return null;
         
     }

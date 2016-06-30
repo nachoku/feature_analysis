@@ -61,7 +61,7 @@ public class Splitter {
       {
 
           int i=0;
-          String op[]=new String [100];
+          String op[]=new String [3000];
           BreakIterator iterator = BreakIterator.getSentenceInstance(Locale.US);
           String source = input;
           iterator.setText(source);
@@ -99,7 +99,7 @@ public class Splitter {
       public String[][] sentence_word(String input) throws SuggesterException
       {
           Splitter obj=new Splitter();
-          String sentence_word[][]=new String[100][500], sentence[]=new String[100], word[]=new String[500];
+          String sentence_word[][]=new String[3000][3000], sentence[]=new String[100], word[]=new String[3000];
           sentence=obj.main_sentence(input);
           int i=0;
           while(sentence[i]!=null)
@@ -120,7 +120,7 @@ public class Splitter {
       public String[][] sentence_word(String input[]) throws SuggesterException
       {
           Splitter obj=new Splitter();
-          String sentence_word[][]=new String[100][500], word[]=new String[500];
+          String sentence_word[][]=new String[3000][3000], word[]=new String[3000];
 
           int i=0;
           while(input[i]!=null)

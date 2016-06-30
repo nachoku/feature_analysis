@@ -1,0 +1,37 @@
+progress,                          /* Firefox  */
+progress[role][aria-valuenow] {    /* Polyfill */
+   background: #009999 !important;
+   width: 250px;
+  height: 20px;
+   /* !important is needed by the polyfill */
+}
+ 
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: #ff4d4d;
+}
+ 
+/* Foreground Colors   */
+/* IE10 */
+progress {
+    color:  #4d4d00
+;
+}
+ 
+/* Firefox */
+progress::-moz-progress-bar { 
+    background:  #4d4d00
+;   
+}
+ 
+/* Chrome */
+progress::-webkit-progress-value {
+    background:  #4d4d00
+;
+}
+ 
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background:  #4d4d00
+;
+}

@@ -24,6 +24,7 @@ ga,go ahead
 gal,get a life
 gf,girlfriend
 gfn,gone for now
+gud,good
 gmbo,giggling my butt off
 gmta,great minds think alike
 h8,hate
@@ -71,3 +72,7 @@ ttyl,talk to you later
 u,you
 ur,you are
 wfm,works for me
+flipkart,shop
+amazon,shop
+lenovo,brand
+samsung,brand

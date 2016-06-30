@@ -21,7 +21,7 @@ public class Tuple
     PrintWriter out = null;
    
     
-    public int classify (String sentences_words[][]) throws SuggesterException, FileNotFoundException, IOException
+    public int classify (int review_no, String sentences_words[][]) throws SuggesterException, FileNotFoundException, IOException
     {
 
         Tuple obj_tuple=new Tuple();
@@ -36,7 +36,7 @@ public class Tuple
         //tagged sentences in sentence array
 
  
-          System.out.println("START");   
+          //System.out.println("START");   
         
 
         String type, word;
@@ -48,7 +48,7 @@ public class Tuple
               String type_array[]=new String[3000], word_array[]=new String[3000];
               while(sentences_words[i][j]!=null)
               {          
-                  char tmpx[]=sentences_words[i][j].toCharArray();//I_PRP
+                  char tmpx[]=sentences_words[i][j].toLowerCase().toCharArray();//I_PRP
                   k=0;
                   type="";
                   word="";
@@ -78,7 +78,7 @@ public class Tuple
                   
                   j++;
               }
-              obj_tuple.create_tuple(word_array,type_array);
+              obj_tuple.create_tuple(review_no, word_array,type_array);
 
               //DELETE THE SENTENCE & TYPE_ARRAY
               i++;
@@ -95,7 +95,7 @@ public class Tuple
     
     
     
-    public void create_tuple(String text[], String type[]) throws FileNotFoundException, IOException, SuggesterException
+    public void create_tuple(int review_no,String text[], String type[]) throws FileNotFoundException, IOException, SuggesterException
     {
         
   
@@ -139,13 +139,13 @@ public class Tuple
         String opinion_holder="";
      
         
-        obj_tuple.write(target, feature , description , NB_score, NB_total);
+        obj_tuple.write(review_no, feature , description , NB_score, NB_total);
     
         
     }
     
         
-    public void write(String one, String two, String three, String four, Float five) throws FileNotFoundException
+    public void write(int one, String two, String three, String four, Float five) throws FileNotFoundException
     {
             out = new PrintWriter(new FileOutputStream(new File("tuple.txt"), true )); 
             out.println(one+";"+ two + ";" + three + ";" + four + ";" + five);

@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
 
   get 'result/front'
-
+  get 'result/view'
+  get 'result/sort1'
   get 'backend/front'
   get 'backend/store'
   get 'backend/crawl_delete'

@@ -1,27 +1,37 @@
 
 
+<span class="label label-success">59-100% : Good</span>
+<span class="label label-warning">50-59% : Average</span>
+<span class="label label-danger">0-49% : Bad</span>
 <div id='chart' class="col-xs-6">
+
+<br><br><br><br><br><br><br>
 <%= render_chart(@chart, 'chart') %>
 <% if params[:param1] %>
 <%= render_chart(@fea, 'chart') %>
+
 <% end -%>
+
 
 </div>
 <div id='chart' class="col-xs-6">
-<br><br>
-<div class="list-group">
-<% @feature_file.each_line do |line| %>
-	<% line.split(",").each do |x|%>
-	<%@name=@percentage %>
-	<%@percentage=x %>
- 
-  <% end -%>
 
-    
-    <%= link_to @name,  result_front_path(:param1 => @name, :param2=> @percentage),:class => "list-group-item list-group-item-heading" %>
-  
-  
-<% end -%>
+<%= link_to  "Sorted", result_sort1_path, :class => "col-xs-12 col-sm-6 btn btn-primary disabled" %>
+<%= link_to  "Sorted Single Graph", result_view_path, :class => "col-xs-12 col-sm-6 btn btn-primary" %>
+	<br><br>
+	<div class="list-group">
+	<% @feature_file.each_line do |line| %>
+		<% line.split(",").each do |x|%>
+
+		<%@name=@percentage %>
+		<%@percentage=@occurences %>
+		<% @occurences=@review%>
+	 	<%@review=x %>
+	  <% end -%>
+	  <br>
+	    <%= link_to @name+"("+@occurences+")",  result_front_path(:param1 => @name, :param2=> @percentage),:class => "list-group-item list-group-item-heading" %>
+	    <%= link_to "View Reviews",  result_view_path(:param =>@name),:class => "list-group-item-text" %>
+	<% end -%>
 
 
 </div>
@@ -29,7 +39,9 @@
 
 </div>
 
-<%=@overall%>
+
+
+
 
 
 

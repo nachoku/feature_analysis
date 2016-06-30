@@ -3,7 +3,7 @@
 package fyp_backend;
 
 import com.softcorporation.suggester.util.SuggesterException;
-import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -84,11 +84,11 @@ public class Elements
                     text[i]="";
                 }
             }
-            if(type[i].equalsIgnoreCase("VB")||type[i].equalsIgnoreCase("JJ")||type[i].equalsIgnoreCase("VB")||type[i].equalsIgnoreCase("VBD")||type[i].equalsIgnoreCase("VBG")||type[i].equalsIgnoreCase("VBN")||type[i].equalsIgnoreCase("VBP") || type[i].equalsIgnoreCase("VBZ"))
+            if(type[i].equalsIgnoreCase("JJ"))
             {
                 if(!text[i].equals("") && obj_correct.check_corrector(text[i]))
                 {
-                    output+=text[i]+" ";        
+                    output+=text[i]+" ";
                 }      
             }
             
@@ -102,7 +102,7 @@ public class Elements
         if(negative_list==null) 
         {
             negative_list = new ArrayList<String>();
-            Scanner scan = new Scanner(new File("NegatingWordList.txt"));
+            Scanner scan = new Scanner(new FileInputStream("NegatingWordList.txt"));
 
              while (scan.hasNextLine())
              {
@@ -154,7 +154,7 @@ public class Elements
         if(booster_list==null) 
         {
             booster_list = new ArrayList<String>();
-            Scanner scan = new Scanner(new File("BoosterWordList.txt"));
+            Scanner scan = new Scanner(new FileInputStream("BoosterWordList.txt"));
 
              while (scan.hasNextLine())
              {
@@ -195,7 +195,7 @@ public class Elements
                     for(int i=3;i<array.length;i++)
                     {
                         word+=array[i];
-                        System.out.println(word);
+                        //System.out.println(word);
                     }
                     if(obj_naive.main_naivebayes(obj_stem.main_stem(word))==null)
                     {
@@ -232,9 +232,13 @@ public class Elements
             String temp=scan_total.next();
             if(!temp.equalsIgnoreCase("null"))
             {
-                output+=Float.valueOf(temp);
-                i++;
-                System.out.println(">>>>"+output);
+                Float value=Float.valueOf(temp);
+                if(value<(float)0.5||value>(float)0.55)
+                {
+                    output+=value;
+                    i++;
+                }
+                //System.out.println(">>>>"+output);
             }
         }
         if (output!=null)

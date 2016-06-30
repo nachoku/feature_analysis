@@ -1,0 +1,27 @@
+<br>
+
+<br>
+<% File.open("feature_sort.txt","r").each_line do |line| %>
+	<% line.split(",").each do |x|%>
+
+		<%@name=@percentage %>
+		<%@percentage=x %>
+
+	<% end -%>
+	
+	
+	
+	
+	<div class="panel panel-danger">
+	  <div class="panel-heading">
+	    <h3 class="panel-title"><%=@name%></h3>
+	  </div>
+	  <div class="panel-body">
+	    <progress value='<%=@percentage.to_f*100%>' max="100"></progress>  <%=@percentage.to_f*100%>%
+	  </div>
+	</div>
+
+
+	<% end -%>
+
+<% end -%>

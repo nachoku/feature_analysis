@@ -15,74 +15,70 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- *
- * @author nach
- */
 public class Result {
     
     public void overall() throws FileNotFoundException
     {
         Scanner scan = new Scanner(new FileInputStream("tuple.txt"));
         
-        int total_n=0;
-        Float total=null;
-        String nb="";
         
+        HashMap <String, Float> hm_feature=new HashMap <String, Float>();
+        HashMap <String, Integer> hm_occurences=new HashMap <String, Integer>();
+        HashMap <String, String> hm_review=new HashMap <String, String>(); 
         while(scan.hasNextLine())
-        {
-            
+        {          
             Scanner scan_split=new Scanner(scan.nextLine());
             scan_split.useDelimiter(";");
             
-            while(scan_split.hasNext())
-            {
-                nb=scan_split.next();
-                
-            }
-            if(!nb.equals("NaN"))
-            {   
-                Float tmp=Float.valueOf(nb);
-                total_n++;
-                if(total==null)
+            String review_no=scan_split.next();System.out.println("Review:"+review_no);
+            String feature=scan_split.next();System.out.println("Feature:"+feature);
+            String description=scan_split.next();System.out.println("Description:"+description);
+            String unwanted=scan_split.next();System.out.println("Nb_scores:"+unwanted);
+            String nb_total=scan_split.next();System.out.println("nb_total:"+nb_total);
+           
+            Scanner scan_feature=new Scanner(feature);
+            scan_feature.useDelimiter(" ");
+            if(!(String.valueOf(Float.valueOf(nb_total))).equalsIgnoreCase("nan"))
+                while(scan_feature.hasNext())
                 {
-                    total=tmp;
-                }
-                else{
-                total=(float)total+(float)tmp;
-                }
-                //System.out.println(total+ " "+total_n);
-                
-            }
-            
 
-            //System.out.println(total+ "  "+ total_n);
+                    String temp=scan_feature.next();System.out.println(temp+" "+nb_total);
+                    if(hm_feature.get(temp)!=null)
+                    {
+                        hm_feature.put(temp,hm_feature.get(temp)+Float.valueOf(nb_total));
+                        hm_occurences.put(temp,hm_occurences.get(temp)+1);
+                        hm_review.put(temp,review_no);
+                        
+                    }
+                    else
+                    {
+                        hm_feature.put(temp,Float.valueOf(nb_total));
+                        hm_occurences.put(temp,1);
+                        hm_review.put(temp,hm_review.get(temp)+ " "+review_no);
+                    }
+                }        
             
-            /*
-            String unwanted=scan_split.next();System.out.println(",,"+unwanted);
-            unwanted=scan_split.next();System.out.println(unwanted);
-            unwanted=scan_split.next();System.out.println(unwanted);
-            String nb=scan_split.next();
+        }       
+        int total_no=0;
+        Float total=(float)0;
+        for(Map.Entry<String, Float> e : hm_feature.entrySet())
+        {  
             
-            Scanner scan_nb=new Scanner(nb);
-            scan_nb.useDelimiter(" ");
-            while(scan_nb.hasNext())
-            {
-                String temp=scan.next();
-                if(!temp.equals("null"))
-                {
-                    total+=Float.valueOf(temp);
-                    total_n++;
-                }
-            }
-            
-            */
-            
+             int value=hm_occurences.get(e.getKey());
+             //System.out.println(value);
+             if(value>2&&!e.getValue().equals("NaN"))
+             {
+                total+=e.getValue();
+                total_no+=value;
+                //System.out.println(e.getValue()+":"+e.getKey());
+             }        
         }
+        
         
         PrintWriter out = new PrintWriter(new FileOutputStream(new File("C:\\Users\\nach\\Documents\\NetBeansProjects\\overall.txt"), false ));       
         
-        Float value=total/total_n;
+        Float value=total/total_no;
+        System.out.println("Overall"+value);
         out.print(value);
                
         
@@ -97,50 +93,57 @@ public class Result {
         
         HashMap <String, Float> hm_feature=new HashMap <String, Float>();
         HashMap <String, Integer> hm_occurences=new HashMap <String, Integer>();
-
+        HashMap <String, String> hm_review=new HashMap <String, String>();
         while(scan.hasNextLine())
         {          
             Scanner scan_split=new Scanner(scan.nextLine());
             scan_split.useDelimiter(";");
             
-            //String unwanted=scan_split.next();System.out.println("UNWANTED"+unwanted);
-            String feature=scan_split.next();System.out.println("UNWANTED"+feature);
-            String description=scan_split.next();System.out.println("UNWANTED"+description);
-            String unwanted=scan_split.next();System.out.println("UNWANTED"+unwanted);
-            String nb_total=scan_split.next();System.out.println("UNWANTED"+nb_total);
-            
+            String review_no=scan_split.next();System.out.println("Review:"+review_no);
+            String feature=scan_split.next();System.out.println("Feature:"+feature);
+            String description=scan_split.next();System.out.println("Description:"+description);
+            String unwanted=scan_split.next();System.out.println("NB_per:"+unwanted);
+            String nb_total=scan_split.next();System.out.println("nb_total:"+nb_total);
+           
             Scanner scan_feature=new Scanner(feature);
             scan_feature.useDelimiter(" ");
+  
             if(!(String.valueOf(Float.valueOf(nb_total))).equalsIgnoreCase("nan"))
+            {
+               
                 while(scan_feature.hasNext())
                 {
-
-                    String temp=scan_feature.next();System.out.println(temp+" "+nb_total);
+                    
+                    String temp=scan_feature.next();
                     if(hm_feature.get(temp)!=null)
                     {
                         hm_feature.put(temp,hm_feature.get(temp)+Float.valueOf(nb_total));
                         hm_occurences.put(temp,hm_occurences.get(temp)+1);
+                        hm_review.put(temp,hm_review.get(temp)+" "+review_no);
+                        System.out.println(">>>>>>>>>>>"+hm_review.get(temp));
                     }
                     else
                     {
                         hm_feature.put(temp,Float.valueOf(nb_total));
                         hm_occurences.put(temp,1);
+                        hm_review.put(temp,review_no);
+                        System.out.println(">>>>>>>>>>>"+hm_review.get(temp));
                     }
                 }        
-            
+            }
         }       
         
         
         PrintWriter out = new PrintWriter(new FileOutputStream(new File("C:\\Users\\nach\\Documents\\NetBeansProjects\\feature.txt"), false ));       
-        
+      
         for(Map.Entry<String, Float> e : hm_feature.entrySet())
         {  
-            
              int value=hm_occurences.get(e.getKey());
-             Float output=e.getValue()/value;
-             
-             out.println(e.getKey()+","+output);
-             
+             if(value>2)
+             {
+                Float output=e.getValue()/value;       
+                out.println(e.getKey()+","+output+","+value+","+hm_review.get(e.getKey()));
+             }
         }
         
         
